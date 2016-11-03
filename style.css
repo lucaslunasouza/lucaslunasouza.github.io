@@ -77,8 +77,8 @@ body{
     position: relative;
 }
 .parallax__layer__0{
-    -webkit-transform: translateZ(-1px) translateY(10%) translateX(-50%) scale(1);
-    -moz-transform: translateZ(-1px) translateY(55%) translateX(-50%) scale(1);
+    -webkit-transform: translateZ(-1px) scale(1);
+    -moz-transform: translateZ(-1px) scale(1);
     transform: translateZ(-1px) scale(1);
     height: 30vh;
     bottom: -40vh;
@@ -87,8 +87,8 @@ body{
 }
 
 .parallax__layer__1{
-    -webkit-transform: translateZ(-2px) translateY(45%) translateX(-50%) scale(1);
-    -moz-transform: translateZ(-2px) translateY(45%) translateX(-50%) scale(1);
+    -webkit-transform: translateZ(-2px) scale(2);
+    -moz-transform: translateZ(-2px) scale(2);
     transform: translateZ(-2px) scale(2);
     bottom: -33vh;
     left: -50vw;
@@ -96,8 +96,8 @@ body{
 }
 
 .parallax__layer__2{
-    -webkit-transform: translateZ(-3px) translateY(60%) translateX(-50%) scale(1);
-    -moz-transform: translateZ(-3px) translateY(60%) translateX(-50%) scale(1);
+    -webkit-transform: translateZ(-3px) scale(3);
+    -moz-transform: translateZ(-3px) scale(3);
     transform: translateZ(-3px) scale(3);
     bottom: -28vh;
     left: -50vw;
@@ -112,8 +112,8 @@ body{
 }
 
 .parallax__layer__4{
-    -webkit-transform: translateZ(-5px) scale(6);
-    -moz-transform: translateZ(-5px) scale(6);
+    -webkit-transform: translateZ(-5px) scale(5);
+    -moz-transform: translateZ(-5px) scale(5);
     transform: translateZ(-5px) scale(5);
     bottom: -20vh;
     left: -50vw;
@@ -121,8 +121,8 @@ body{
 }
 
 .parallax__layer__5{
-    -webkit-transform: translateZ(-6px) scale(4);
-    -moz-transform: translateZ(-6px) scale(4);
+    -webkit-transform: translateZ(-6px) scale(5);
+    -moz-transform: translateZ(-6px) scale(5);
     transform: translateZ(-6px) scale(5);
     bottom: -30vh;
     left: -50vw;
