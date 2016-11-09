@@ -22,7 +22,6 @@
     text-align: center;
 }
 .social-button {
-
     border: 2px solid #3F3F3F;
     color: #3F3F3F;
     border-radius: 50%;
@@ -30,10 +29,10 @@
     height: 50px;
     display: inline-block;
     background-color: transparent;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration:  0.5s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration:  0.3s;
 }
 .social-button:hover{
     background-color: #3F3F3F;
@@ -44,10 +43,37 @@
     top: 25%;
     position: relative;
 }
+.photo{
+    transform: translate(0, -50%);
+    top: 50vh;
+    position: absolute;
+}
+
+.animation.fade-right.in{
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.animation.fade-right{
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+    -webkit-transition: -webkit-transform .6s ease-in,opacity .8s ease-in;
+    transition: .8s;
+}
+
+
 
 html{
     box-sizing: border-box;
     overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 *, *::before, *::after{
@@ -58,101 +84,120 @@ body{
     height: 100vh;
     margin:0;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: none;
     -webkit-overflow-scrolling: touch;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+}
+
+.parallax__layer__0{
+    bottom: -80vh;
+    left: -50vw;
+    height: 100vh;
+}
+
+.parallax__layer__1{
+    -webkit-transform: translateZ(-1px) scale(2);
+    -moz-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2);
+    bottom: -8vh;
+    left: -50vw;
+}
+
+.parallax__layer__2{
+    -webkit-transform: translateZ(-2px) scale(2);
+    -moz-transform: translateZ(-2px) scale(2);
+    transform: translateZ(-2px) scale(2);
+    bottom: -27vh;
+    left: -50%;
+}
+.parallax__layer__3{
+    -webkit-transform: translateZ(-3px) scale(4);
+    -moz-transform: translateZ(-3px) scale(4);
+    transform: translateZ(-3px) scale(4);
+    bottom: 0vh;
+    left: calc(50vw - 960px);
+}
+
+.parallax__layer__4{
+    -webkit-transform: translateZ(-4px) scale(4);
+    -moz-transform: translateZ(-4px) scale(4);
+    transform: translateZ(-4px) scale(4);
+    bottom: -20vh;
+
+}
+
+.parallax__layer__5{
+    -webkit-transform: translateZ(-5px) scale(5);
+    -moz-transform: translateZ(-5px) scale(5);
+    transform: translateZ(-5px) scale(5);
+    bottom: -50vh;
+}
+.parallax__layer{
+    position: absolute;
+}
+
+.city{
     background: #007BFF; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#007BFF , white); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#007BFF, white); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#007BFF, white); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#007BFF , white); /* Standard syntax */
-    -webkit-perspective: 1px;
-    perspective: 1px;
-}
-
-.parallax{
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
     height: 100vh;
     width: 100vw;
-    position: relative;
-}
-.parallax__layer__0{
-    -webkit-transform: translateZ(-1px) scale(1);
-    -moz-transform: translateZ(-1px) scale(1);
-    transform: translateZ(-1px) scale(1);
-    height: 30vh;
-    bottom: -40vh;
-    left: -50vw;
-    position: relative;
 }
 
-.parallax__layer__1{
-    -webkit-transform: translateZ(-2px) scale(2);
-    -moz-transform: translateZ(-2px) scale(2);
-    transform: translateZ(-2px) scale(2);
-    bottom: -33vh;
-    left: -50vw;
-    position: absolute;
-}
-
-.parallax__layer__2{
-    -webkit-transform: translateZ(-3px) scale(3);
-    -moz-transform: translateZ(-3px) scale(3);
-    transform: translateZ(-3px) scale(3);
-    bottom: -28vh;
-    left: -50vw;
-    position: absolute;
-}
-.parallax__layer__3{
-    -webkit-transform: translateZ(-4px) scale(5);
-    -moz-transform: translateZ(-4px) scale(5);
-    transform: translateZ(-4px) scale(5);
-    bottom: 5vh;
-    position: absolute;
-}
-
-.parallax__layer__4{
-    -webkit-transform: translateZ(-5px) scale(5);
-    -moz-transform: translateZ(-5px) scale(5);
-    transform: translateZ(-5px) scale(5);
-    bottom: -20vh;
-    left: -50vw;
-    position: absolute;
-}
-
-.parallax__layer__5{
-    -webkit-transform: translateZ(-6px) scale(5);
-    -moz-transform: translateZ(-6px) scale(5);
-    transform: translateZ(-6px) scale(5);
-    bottom: -30vh;
-    left: -50vw;
-    position: absolute;
-}
-
-.parallax__layer{
-    position: absolute;
-
-}
 .water{
     z-index=1;
-    -webkit-transform: translateZ(-1px) translateY(110%) translateX(0%) scale(2);
-    -moz-transform: translateZ(-1px) translateY(110%) translateX(0%) scale(2);
-    transform: translateZ(-1px) translateY(110%) translateX(0%) scale(2);
     position: absolute;
     background: #007BFF; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0066F9 , #000000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0066F9 , #000000); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0066F9 , #000000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#0066F9 , #000000);
-    top: 75vh;
+    background: -webkit-linear-gradient(#0066F9 , black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0066F9 , black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0066F9 , black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#0066F9 , black);
+    top: 100vh;
     width: 300vh;
-    height: 125vh;
+    height: 100vh;
 }
 .svg{
   height:100vh;
   bottom:0;
 }
-
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media only screen and (min-device-width: 1280px) and (min-device-height: 720px){
+    .name{
+        font-size: 70px;
+    }
+
+
+}
+@media only screen and (max-device-height: 660px){
+    .parallax__layer{
+        bottom: -50%;
+    }
+    .parallax__layer__0{
+        bottom: -84vh;
+        left: -50vw;
+    }
+    .parallax__layer__1{
+        display: none
+    }
+    .parallax__layer__2{
+        display: none;
+    }
+    .parallax__layer__3{
+        bottom: -60vh;
+    }
+    .parallax__layer__4{
+        bottom: -220vh;
+        height: 100vh;
+    }
+    .parallax__layer__5{
+        bottom: -340vh;
+        height: 100vh;
+    }
+
 }
