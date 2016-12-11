@@ -1,6 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         <title>Lucas Luna Souza</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,11 +13,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <link rel="stylesheet" href="animations.css">
-        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/didact-gothic" type="text/css"/>
     </head>
 
-    <body>
+    <body ondragstart="return false;" ondrop="return false;">
         <div class="city">
             <div class="parallax__layer parallax__layer__5">
                 <img src="Layers/Layer5.png" class="layer"></img>
@@ -36,37 +38,37 @@
             </div>
 
             <div class="container">
-                <div class="row top">
+                <div class="row top header animated fade">
                     <div>
                         <h1 class="name">Lucas Luna Souza</h1>
                     </div>
                     <div class="social-icons">
-                        <a href="https://ca.linkedin.com/in/lucas-souza-942132100" class="social-button"><i class="fa fa-linkedin "></i></a>
-                        <a href="https://github.com/lucaslunasouza" class="social-button"><i class="fa fa-github"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100004836766847" class="social-button"><i class="fa fa-facebook"></i></a>
-                        <a href="http://steamcommunity.com/id/Deadly4ce" class="social-button"><i class="fa fa-steam"></i></a>
-                        <a href="index.html" class="social-button"><i class="fa fa-envelope"></i></a>
+                        <a href="https://ca.linkedin.com/in/lucas-souza-942132100" class="button social-button"><i class="fa fa-linkedin "></i></a>
+                        <a href="https://github.com/lucaslunasouza" class="button social-button"><i class="fa fa-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100004836766847" class="button social-button"><i class="fa fa-facebook"></i></a>
+                        <a href="http://steamcommunity.com/id/Deadly4ce" class="button social-button"><i class="fa fa-steam"></i></a>
+                        <a href="index.html" class="button social-button"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="water">
-            <div class="col-sm-4 col-sm-offset-1">
-              <div class="repeat animated fadeInLeft slowest go">
-                <img class="img-responsive img-circle img-center photo" src="lucas1.jpg"></img>
-              </div>
+        <div class="water row">
+            <div class="col-sm-3 col-sm-offset-1">
+                <img class="img-responsive img-circle img-center photo animated fade shift" src="lucas1.jpg"></img>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="about animated fade shift">I am currently studying computer science at the University of Toronto and expect to graduate in 2019.
+                    I am a well rounded person with great problem solving skills and experience with a variety of programming languages and software tools.
+                    I am a fast learner, work well in a team and can be counted on to get the job done. <br> <br> I am seeking internship opportunities for summer 2017.
+                    <br> <br> <a href="" class="button resume-button">Resume</a></h2>
+
             </div>
         </div>
-
-
-
-        <!-- JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <div class="deep-water">
+        </div>
 
         <script type="text/javascript" src="scroll.js"></script>
-        <script src='css3-animate-it.js'></script>
-
         <!-- Bootstrap JS -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
