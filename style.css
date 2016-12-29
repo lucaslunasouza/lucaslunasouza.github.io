@@ -1,13 +1,41 @@
 .header{
     opacity: 0;
 }
-.name{
+.didact{
     font-family: 'DidactGothicMedium', sans-serif;
     text-align: center;
-    font-size: 70px;
     letter-spacing: 1%;
-    font-weight: bold;
+}
+.title{
+    font-size: 70px;
+}
+.name{
     color: #3F3F3F;
+}
+.section_title{
+    position:absolute;
+    left: 50%;
+    top: 10vh;
+    transform: translate(-50%, -100%);
+    color: #AFAFAF;
+}
+.about{
+    font-size: 26px;
+    left: 50%;
+    width: 80%;
+    top: 40vh;
+    transform: translate(-25%, -50%);
+    color: #AFAFAF;
+}
+.description{
+    font-size: 26px;
+    top: 40vh;
+    left: 50%;
+    width: 80%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    color: #AFAFAF;
+    z-index: 3;
 }
 .social-icons {
     position: relative;
@@ -47,20 +75,8 @@
 .photo{
     opacity: 0;
     left: 50%;
-    top: 50vh;
+    top: 40vh;
     transform: translate(-75%, -50%);
-}
-.about{
-    font-family: 'DidactGothicMedium', sans-serif;
-    text-align: center;
-    font-size: 26px;
-    letter-spacing: 1%;
-    left: 50%;
-    width: 80%;
-    top: 50vh;
-    transform: translate(-25%, -50%);
-    font-weight: bold;
-    color: #AFAFAF;
 }
 .resume-button{
     color: #AFAFAF;
@@ -132,7 +148,7 @@ body{
     perspective-origin-x: 100%;
 }
 
-.parallax__layer__0{
+#parallax_layer_0{
     -webkit-transform: translateZ(0px) scale(1);
     -moz-transform: translateZ(0px) scale(1);
     transform: translateZ(0px) scale(1);
@@ -143,7 +159,7 @@ body{
     z-index: 0;
 }
 
-.parallax__layer__1{
+#parallax_layer_1{
     -webkit-transform: translateZ(-1px) scale(2);
     -moz-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);
@@ -154,7 +170,7 @@ body{
     z-index: -1;
 }
 
-.parallax__layer__2{
+#parallax_layer_2{
     -webkit-transform: translateZ(-2px) scale(3);
     -moz-transform: translateZ(-2px) scale(3);
     transform: translateZ(-2px) scale(3);
@@ -165,7 +181,7 @@ body{
     z-index: -2;
 }
 
-.parallax__layer__3{
+#parallax_layer_3{
     -webkit-transform: translateZ(-3px) scale(4);
     -moz-transform: translateZ(-3px) scale(4);
     transform: translateZ(-3px) scale(4);
@@ -174,7 +190,7 @@ body{
     z-index: -3;
 }
 
-.parallax__layer__4{
+#parallax_layer_4{
     -webkit-transform: translateZ(-4px) scale(5);
     -moz-transform: translateZ(-4px) scale(5);
     transform: translateZ(-4px) scale(5);
@@ -184,7 +200,7 @@ body{
     z-index: -4;
 }
 
-.parallax__layer__5{
+#parallax_layer_5{
     -webkit-transform: translateZ(-5px) scale(6);
     -moz-transform: translateZ(-5px) scale(6);
     transform: translateZ(-5px) scale(6);
@@ -193,7 +209,7 @@ body{
     min-width: 0vw;
     z-index: -5;
 }
-.parallax__layer{
+.parallax_layer{
     position: absolute;
     overflow: hidden;
     -webkit-transform-origin-x: 100%;
@@ -379,60 +395,131 @@ body{
             transition: all 0.3s 1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
 }
 
+.slideshow{
+    width: 40vw;
+    min-width: 400px;
+    position: absolute;
+    left: 30vw;
+    top: 25vh;
+}
+
+
+
+/*Last thing remaining is to add transitions*/
+.slideshow>img{
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s;
+}
+
+.slideshow input[name='slide_switch'] {
+    display: none;
+}
+
+.slideshow label {
+    margin: 0 0 0 1vw;
+    left: 4vw;
+    width: 5vw;
+    min-width: 50px;
+    position: relative;
+    border: 2px solid #AFAFAF;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0.6;
+    top: 60vh;
+}
+
+.slideshow label img{
+    width: 100%;
+}
+
+/*Time to add the click effects*/
+.slideshow input[name='slide_switch']:checked+label {
+    border-color: #3F3F3F;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slideshow input[name='slide_switch'] ~ img {
+    opacity: 0;
+    width: 35vw;
+    left: 2.5vw;
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slideshow input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    width: 40vw;
+    min-width: 400px;
+    left: 0;
+}
+
 
 @media only screen and (max-width: 1280px) and (max-height: 736px){
-    .name{
+    .title{
         font-size: 42px;
     }
 }
+@media only screen and (max-width: 1000px){
+    .slideshow{
+       left: calc((100vw - 400px)/2); 
+    }
+    .slideshow label {
+        left: 40px;
+        margin: 0 0 0 10px;
+    }
+
+}
 
 @media only screen and (max-height: 660px){
-    .parallax__layer__1{
+    #parallax_layer_1{
         display: none;
     }
-    .parallax__layer__2{
+    #parallax_layer_2{
         display: none;
     }
-    .parallax__layer__3{
+    #parallax_layer_3{
         bottom: -30vh;
     }
-    .parallax__layer__4{
+    #parallax_layer_4{
         bottom: -60vh;
     }
-    .parallax__layer__5{
+    #parallax_layer_5{
         bottom: -140vh;
     }
 }
 @media only screen and (min-height: 1200px){
-    .parallax__layer__2{
+    #parallax_layer_2{
         bottom: -20vh;
     }
-    .parallax__layer__3{
+    #parallax_layer_3{
         bottom: -20vh;
     }
-    .parallax__layer__4{
+    #parallax_layer_4{
         bottom: -40vh;
     }
-    .parallax__layer__5{
+    #parallax_layer_5{
         bottom: -80vh;
     }
 }
 @media only screen and (min-height: 1700px){
-    .parallax__layer__2{
+    #parallax_layer_2{
         bottom: -25vh;
     }
-    .parallax__layer__3{
+    #parallax_layer_3{
         bottom: -30vh;
     }
-    .parallax__layer__4{
+    #parallax_layer_4{
         bottom: -60vh;
     }
-    .parallax__layer__5{
+    #parallax_layer_5{
         bottom: -100vh;
     }
 }
 @media only screen and (min-height: 1200px) and (min-width: 1000px){
-     .name{
+     .title{
         font-size: 120px;
     }
     .social-button {
@@ -456,4 +543,19 @@ body{
     .about{
         font-size: 16px;
     }
+}
+@media only screen and (max-width: 335px) and (max-height: 590px){
+    #parallax_layer_0{
+        bottom:-8vh;
+    }
+    #parallax_layer_3{
+        display: none;
+    }
+    #parallax_layer_4{
+        bottom: -80vh;
+    }
+    .layer{
+        width:500vw;
+    }
+
 }

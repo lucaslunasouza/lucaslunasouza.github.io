@@ -23,12 +23,12 @@ function scaleLeft(){
   if( window.innerWidth <= 1920){
     var leftOffset = 1920;
     var left = ((window.innerWidth - leftOffset) / 2);
-    $(".parallax__layer__3").css("left", (left).toString()+"px");
-    $(".parallax__layer__3").css("width", (window.innerWidth - left).toString()+"px");
+    $("#parallax_layer_3").css("left", (left).toString()+"px");
+    $("#parallax_layer_3").css("width", (window.innerWidth - left).toString()+"px");
   }
   else{
-    $(".parallax__layer__3").css("left", "0");
-    $(".parallax__layer__3").css("width", "100vw");
+    $("#parallax_layer_3").css("left", "0");
+    $("#parallax_layer_3").css("width", "100vw");
   }
 }
 
