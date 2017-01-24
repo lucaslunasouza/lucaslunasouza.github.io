@@ -27,9 +27,22 @@
     transform: translate(-25%, -50%);
     color: #AFAFAF;
 }
-.description{
+.p_text{
+    position: absolute;
+    top: 46vh;
+    width: 100%;
+}
+.p_name{
     font-size: 26px;
-    top: 40vh;
+    left: 50%;
+    width: 80%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    color: #AFAFAF;
+    z-index: 3;
+}
+.p_desc{
+    font-size: 18px;
     left: 50%;
     width: 80%;
     position: relative;
@@ -225,21 +238,21 @@ body{
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background: #007BFF; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#007BFF , white); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#007BFF, white); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#007BFF, white); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#007BFF , white); /* Standard syntax */
+    background: #007BFF;
+    background: -webkit-linear-gradient(#007BFF , white);
+    background: -o-linear-gradient(#007BFF, white);
+    background: -moz-linear-gradient(#007BFF, white);
+    background: linear-gradient(#007BFF , white); 
     z-index: -6;
 }
 
 .water{
     z-index: 1;
     position: absolute;
-    background: #007BFF; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0066F9 , #002E71); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0066F9 , #002E71); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0066F9 , #002E71); /* For Firefox 3.6 to 15 */
+    background: #007BFF; 
+    background: -webkit-linear-gradient(#0066F9 , #002E71);
+    background: -o-linear-gradient(#0066F9 , #002E71); 
+    background: -moz-linear-gradient(#0066F9 , #002E71); 
     background: linear-gradient(#0066F9 , #002E71);
     top: 100vh;
     width: 100vw;
@@ -249,10 +262,10 @@ body{
 .deep-water{
     z-index: 1;
     position: absolute;
-    background: #002E71; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#002E71 ,black 84%); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#002E71 , black 84%); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#002E71 , black 84%); /* For Firefox 3.6 to 15 */
+    background: #002E71; 
+    background: -webkit-linear-gradient(#002E71 ,black 84%);
+    background: -o-linear-gradient(#002E71 , black 84%); 
+    background: -moz-linear-gradient(#002E71 , black 84%);
     background: linear-gradient(#002E71 , black 84%);
     top: 200vh;
     width: 100vw;
@@ -284,8 +297,8 @@ body{
     border: 2px solid transparent;
     border-top-color: #0066F9;
 
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 2s linear infinite; 
+    animation: spin 2s linear infinite; 
     z-index: 1001;
 }
 
@@ -300,8 +313,8 @@ body{
     border: 2px solid transparent;
     border-top-color: #00A2FC;
 
-    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite; 
 }
 
 #loader:after {
@@ -315,32 +328,32 @@ body{
     border: 2px solid transparent;
     border-top-color: #44C7F5;
 
-    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-     animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 1.5s linear infinite;
+     animation: spin 1.5s linear infinite; 
 }
 
 @-webkit-keyframes spin {
     0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0deg); 
+        -ms-transform: rotate(0deg);  
+        transform: rotate(0deg); 
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg); 
+        -ms-transform: rotate(360deg); 
+        transform: rotate(360deg); 
     }
 }
 @keyframes spin {
     0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0deg); 
+        -ms-transform: rotate(0deg); 
+        transform: rotate(0deg);  
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -362,37 +375,37 @@ body{
 
 /* Loaded styles */
 .loaded #loader-wrapper .loader-section.section-left {
-    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(-100%);  /* IE 9 */
-            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
 
-    -webkit-transition: all 0.7s 0.3s;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-            transition: all 0.7s 0.3s;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transition: all 0.7s 0.3s;
+            transition: all 0.7s 0.3s;
 }
 .loaded #loader-wrapper .loader-section.section-right {
-    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(100%);  /* IE 9 */
-            transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%); 
+            transform: translateX(100%); 
 
-    -webkit-transition: all 0.7s 0.3s;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-            transition: all 0.7s 0.3s;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transition: all 0.7s 0.3s;
+            transition: all 0.7s 0.3s;
 }
 .loaded #loader {
     opacity: 0;
 
-    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-            transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
 
 }
 .loaded #loader-wrapper {
     visibility: hidden;
 
-    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateY(-100%);  /* IE 9 */
-            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
 
-    -webkit-transition: all 0.3s 1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-            transition: all 0.3s 1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transition: all 0.3s 1s ease-out;
+            transition: all 0.3s 1s ease-out;
 }
 
 .slideshow{
@@ -405,7 +418,6 @@ body{
 
 
 
-/*Last thing remaining is to add transitions*/
 .slideshow>img{
     position: absolute;
     left: 0; top: 0;
@@ -434,21 +446,18 @@ body{
     width: 100%;
 }
 
-/*Time to add the click effects*/
+
 .slideshow input[name='slide_switch']:checked+label {
     border-color: #3F3F3F;
     opacity: 1;
 }
-/*Clicking any thumbnail now should change its opacity(style)*/
-/*Time to work on the main images*/
+
 .slideshow input[name='slide_switch'] ~ img {
     opacity: 0;
     width: 35vw;
     left: 2.5vw;
 }
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
+
 .slideshow input[name='slide_switch']:checked+label+img {
     opacity: 1;
     width: 40vw;
