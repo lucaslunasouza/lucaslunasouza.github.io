@@ -5,7 +5,7 @@ $(document).ready(function () {
 		$("#p_desc").html("Calendar web app that allows users to manage their calendar and share it with others.");
 	});
 	$("#id2").change(function () { 
-		$("#p_name").text("MineGame");    
+		$("#p_name").text("CubeStack");    
 		$("#p_desc").html("Voxel based game written in Java and Processing.");
 	});
 	$("#id3").change(function () {      

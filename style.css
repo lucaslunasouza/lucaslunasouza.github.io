@@ -1,3 +1,13 @@
+.desktop{
+    position: absolute;
+    display: inline;
+}
+
+.mobile{
+    position: absolute;
+    display: none;
+}
+
 .header{
     opacity: 0;
 }
@@ -108,7 +118,6 @@
     padding-right: 15px;
     padding-bottom: 5px;
     padding-left: 15px;
-
 }
 .resume-button:hover{
     background-color: #AFAFAF;
@@ -425,8 +434,6 @@ body{
     top: 25vh;
 }
 
-
-
 .project{
     position: absolute;
     left: 0; top: 0;
@@ -488,7 +495,6 @@ body{
         left: 40px;
         margin: 0 0 0 10px;
     }
-
 }
 
 @media only screen and (max-height: 660px){
@@ -574,6 +580,79 @@ body{
     }
     .layer{
         width:500vw;
+    }
+}
+@media only screen and (max-width: 800px), (max-height: 800px){
+    html{
+        height: 100%;
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+    body{
+
+        background: #007BFF;
+        background: -webkit-linear-gradient(#007BFF , #E6F2FF);
+        background: -o-linear-gradient(#007BFF, #E6F2FF);
+        background: -moz-linear-gradient(#007BFF, #E6F2FF);
+        background: linear-gradient(#007BFF , #E6F2FF);  
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: inline;
+        width: 100vw;
+        position: absolute;
+        overflow-x: hidden;
+        min-width: 0vw;
+    }
+    .mobile-photo{
+        position: relative;
+        margin-top: 5vh;
+        width: 40vw;
+        left: 50%;
+        transform : translate(-50%, 0);
+    }    
+    .mobile-about{
+        margin-top: 5vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        position: relative;
+        text-align: center;
+        font-size: 16px;
+        width: 100vw;
+        color: #3F3F3F;
+    }
+
+    .mobile-social-icons{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        text-align: center;
+        width: 100vw;
+        position: relative;
+    }
+    .mobile-social-button {
+        border: 1px solid #3F3F3F;
+        color: #3F3F3F;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    .mobile-social-button:hover{
+        background-color: #3F3F3F;
+        color: #AFAFAF;
+    }
+    .mobile-social-button:active{
+        transform : scale(0.9);
+    }
+    .mobile-social-button i {
+        font-size: 20px;
+        top: 25%;
+        position: relative;
     }
 
 }
