@@ -434,8 +434,13 @@ body{
     left: 0; right: 0;
     margin: 0 auto;
     width: 40vw;
+    max-width: 600px;
     top: 0;
     transition: all 0.5s;
+}
+
+.project:hover{
+    width: 42vw;
 }
 
 .projects input[name='slide_switch'] {
@@ -447,7 +452,7 @@ body{
     width: 5vw;
     min-width: 50px;
     position: relative;
-    border: 2px solid #AFAFAF;
+    border: 2px solid #3F3F3F;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s;
@@ -459,22 +464,33 @@ body{
     width: 100%;
 }
 
-
 .projects input[name='slide_switch']:checked+label {
-    border-color: #3F3F3F;
+    border-color: #AFAFAF;
     opacity: 1;
+    width: 6vw;
 }
 
-.projects input[name='slide_switch'] ~ img {
+.projects label:hover {
+    border-color: #AFAFAF;
+}
+
+.projects input[name='slide_switch'] ~ a {
     opacity: 0;
     width: 25vw;
+    pointer-events: none;
 }
 
-.projects input[name='slide_switch']:checked+label+img {
+.projects input[name='slide_switch']:checked+label+a {
     opacity: 1;
     width: 40vw;
     min-width: 400px;
     left: 0;
+    pointer-events: auto;
+}
+
+.no-link{    
+    pointer-events: none !important;
+    cursor: pointer !important;
 }
 
 @media only screen and (max-width: 1280px) and (max-height: 736px){
