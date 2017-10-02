@@ -474,17 +474,15 @@ body{
     border-color: #AFAFAF;
 }
 
-.projects input[name='slide_switch'] ~ a {
+.projects input[name='slide_switch'] ~ a .project {
     opacity: 0;
-    width: 25vw;
     pointer-events: none;
 }
 
-.projects input[name='slide_switch']:checked+label+a {
+.projects input[name='slide_switch']:checked+label+a .project {
     opacity: 1;
     width: 40vw;
     min-width: 400px;
-    left: 0;
     pointer-events: auto;
 }
 
