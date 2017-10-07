@@ -476,6 +476,7 @@ body{
 
 .projects input[name='slide_switch'] ~ a .project {
     opacity: 0;
+    width: 35vw;
     pointer-events: none;
 }
 
