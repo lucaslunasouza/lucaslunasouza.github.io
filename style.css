@@ -591,11 +591,11 @@ body{
     }
     body{
 
-        background: #007BFF;
-        background: -webkit-linear-gradient(#007BFF , #B8C2CC);
-        background: -o-linear-gradient(#007BFF, #B8C2CC);
-        background: -moz-linear-gradient(#007BFF, #B8C2CC);
-        background: linear-gradient(#007BFF , #B8C2CC);  
+        background: rgb(127, 189, 255);
+        background: -webkit-linear-gradient(rgb(127, 189, 255) , rgb(127, 189, 255));
+        background: -o-linear-gradient(rgb(127, 189, 255) , rgb(127, 189, 255));
+        background: -moz-linear-gradient(rgb(127, 189, 255) , rgb(127, 189, 255));
+        background: linear-gradient(rgb(127, 189, 255) , rgb(127, 189, 255));
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: 100%;
