@@ -1,1 +1,1 @@
-### [lucaslunasouza.github.io](https://lucaslunasouza.github.io/)
+### [lnsz.ca](https://lnsz.ca)
