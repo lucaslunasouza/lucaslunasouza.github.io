@@ -21,7 +21,7 @@ const fonts = {
     section: '18px',
     header: '20px',
     main: '22px',
-    title: '26px'
+    title: '40px'
   }
 }
 
