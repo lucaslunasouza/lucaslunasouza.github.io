@@ -1,76 +1,53 @@
 import React from 'react'
+import Profile from '../../components/Profile'
+import ProjectList from '../../components/ProjectList'
 import {
   HomeContainer,
-  InfoContainer,
-  NameWrapper,
-  TitleWrapper,
-  DivisorLine,
-  SocialButtonsContainer,
+  ProjectsButtonContainer,
   ProjectsButton
 } from './style'
-import SocialButton from '../../components/SocialButton'
 import {
-  faEnvelope,
-  faFileAlt,
-  faCaretDown
+  faCaretDown,
+  faCaretUp
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  faLinkedinIn,
-  faGithub
-} from '@fortawesome/free-brands-svg-icons'
 import strings from '../../shared/constants/strings'
-import links from '../../shared/constants/links'
+import social from '../../shared/constants/social'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Home extends React.Component {
-  getSocialButtons() {
-    const data = [
-      {
-        icon: faLinkedinIn,
-        url: links.linkedIn
-      },
-      {
-        icon: faGithub,
-        url: links.github
-      },
-      {
-        icon: faEnvelope,
-        url: links.email
-      },
-      {
-        icon: faFileAlt,
-        url: links.resume
-      }
-    ]
-    return data.map(x => {
-      return (
-        <SocialButton
-          icon={x.icon}
-          url={x.url}
-        />
-      )
-    })
+  constructor(props) {
+    super(props)
+    this.state = { showInfo: true }
+    this.toggleShowInfo = this.toggleShowInfo.bind(this)
+  }
+
+  toggleShowInfo() {
+    this.setState({ showInfo: !this.state.showInfo })
+  }
+
+  getProjectsIcon() {
+    return this.state.showInfo ? faCaretDown : faCaretUp
   }
 
   render () {
     return (
-      <HomeContainer>
-        <InfoContainer>
-          <NameWrapper>
-            {strings.name}
-          </NameWrapper>
-          <TitleWrapper>
-            {strings.title}
-          </TitleWrapper>
-          <DivisorLine />
-          <SocialButtonsContainer>
-            {this.getSocialButtons()}
-          </SocialButtonsContainer>
-        </InfoContainer>
-        <ProjectsButton>
-          {strings.portfolio}
-          <FontAwesomeIcon icon={faCaretDown} />
-        </ProjectsButton>
+      <HomeContainer showInfo={this.state.showInfo}>
+        <Profile
+          name={strings.name}
+          title={strings.title}
+          social={social}
+        />
+        <ProjectsButtonContainer>
+          <ProjectsButton
+            showInfo={this.state.showInfo}
+            onClick={this.toggleShowInfo}
+          >
+            {this.state.showInfo ? strings.portfolio : null}
+            <FontAwesomeIcon icon={this.getProjectsIcon()} />
+            {this.state.showInfo ? null : strings.back}
+          </ProjectsButton>
+        </ProjectsButtonContainer> 
+        <ProjectList />
       </HomeContainer>
     )
   }
