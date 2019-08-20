@@ -7,17 +7,17 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 180vh;
+  height: 185vh;
   min-width: 100vw;
   transition: transform 0.5s ease;
-  transform: ${props => !props.showInfo ? 'translateY(-80vh)' : ''};
+  transform: ${props => !props.showInfo ? 'translateY(-85vh)' : ''};
 `
 
 export const ProjectsButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20vh;
+  height: 15vh;
 `
 
 export const ProjectsButton = styled.div`
@@ -32,11 +32,12 @@ export const ProjectsButton = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  padding: 25px;
   &:hover {
-    padding: ${props => props.showInfo ? '0 0 10px 0' : '10px 0 0 0'};
+    margin: ${props => props.showInfo ? '0 0 15px 0' : '15px 0 0 0'};
   }
   &:active {
-    padding: ${props => props.showInfo ? '10px 0 0 0' : '0 0 10px 0'};
+    margin: ${props => props.showInfo ? '15px 0 0 0' : '0 0 15px 0'};
   }
 `
 

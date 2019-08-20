@@ -11,6 +11,7 @@ export const SocialButtonContainer = styled.a`
   align-items: center;
   justify-content: center;
   border: 1px solid white;
+  box-shadow: 0px 0px 1px white;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;

@@ -20,7 +20,7 @@ const fonts = {
     nav: '16px',
     section: '18px',
     header: '20px',
-    main: '22px',
+    main: '28px',
     title: '40px'
   }
 }

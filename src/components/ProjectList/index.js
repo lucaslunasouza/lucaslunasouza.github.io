@@ -1,12 +1,14 @@
 import React from 'react'
 import {
-  ProjectListContainer
+  ProjectListContainer,
+  ProjectListTitle
 } from './style'
+import strings from '../../shared/constants/strings'
 
 const ProjectList = (props) => {
   return (
     <ProjectListContainer>
-      Projects
+      <ProjectListTitle>{strings.projects}</ProjectListTitle>
     </ProjectListContainer>
   )
 }

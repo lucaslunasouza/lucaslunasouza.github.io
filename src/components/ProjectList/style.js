@@ -6,6 +6,9 @@ export const ProjectListContainer = styled.div`
   align-content: center;
   justify-content: center;
   heigth: 80vh;
-  font-size: ${theme.fonts.sizes.main};
   font-weight: 200;
+`
+
+export const ProjectListTitle = styled.div`
+  font-size: ${theme.fonts.sizes.main};
 `

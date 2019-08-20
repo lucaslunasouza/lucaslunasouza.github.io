@@ -4,7 +4,7 @@ import theme from '../../shared/styles/theme.js'
 export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 80vh;
+  height: 85vh;
 `
 
 export const ProfileWrapper = styled.div`

@@ -17,12 +17,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { showInfo: true }
+    this.state = { showInfo: localStorage.showInfo === 'true' }
     this.toggleShowInfo = this.toggleShowInfo.bind(this)
   }
 
+  saveState() {
+    const local = this.state.showInfo;
+    localStorage.setItem('showInfo', local);
+  }
+
   toggleShowInfo() {
-    this.setState({ showInfo: !this.state.showInfo })
+    this.setState({ showInfo: !this.state.showInfo }, this.saveState)
   }
 
   getProjectsIcon() {
