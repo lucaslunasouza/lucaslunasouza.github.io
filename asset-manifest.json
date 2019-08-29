@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lnsz.ca/static/css/main.c4e3a9a2.chunk.css",
-    "main.js": "/lnsz.ca/static/js/main.b19375e8.chunk.js",
-    "main.js.map": "/lnsz.ca/static/js/main.b19375e8.chunk.js.map",
-    "runtime~main.js": "/lnsz.ca/static/js/runtime~main.db5d9a60.js",
-    "runtime~main.js.map": "/lnsz.ca/static/js/runtime~main.db5d9a60.js.map",
-    "static/js/2.33b152e5.chunk.js": "/lnsz.ca/static/js/2.33b152e5.chunk.js",
-    "static/js/2.33b152e5.chunk.js.map": "/lnsz.ca/static/js/2.33b152e5.chunk.js.map",
-    "index.html": "/lnsz.ca/index.html",
-    "precache-manifest.ffe63b2e67056b509ba9970c32d0d477.js": "/lnsz.ca/precache-manifest.ffe63b2e67056b509ba9970c32d0d477.js",
-    "service-worker.js": "/lnsz.ca/service-worker.js",
-    "static/css/main.c4e3a9a2.chunk.css.map": "/lnsz.ca/static/css/main.c4e3a9a2.chunk.css.map",
-    "static/media/lucas-resume.pdf": "/lnsz.ca/static/media/lucas-resume.6818b2ab.pdf"
+    "main.css": "/static/css/main.c4e3a9a2.chunk.css",
+    "main.js": "/static/js/main.4ed3a467.chunk.js",
+    "main.js.map": "/static/js/main.4ed3a467.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.aabf0028.chunk.js": "/static/js/2.aabf0028.chunk.js",
+    "static/js/2.aabf0028.chunk.js.map": "/static/js/2.aabf0028.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.88a8d5542852219c9919548e7bde580a.js": "/precache-manifest.88a8d5542852219c9919548e7bde580a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c4e3a9a2.chunk.css.map": "/static/css/main.c4e3a9a2.chunk.css.map",
+    "static/media/lucas-resume.pdf": "/static/media/lucas-resume.6818b2ab.pdf"
   }
 }
