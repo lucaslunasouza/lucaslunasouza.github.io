@@ -5,7 +5,7 @@ import Home from './views/Home'
 function App () {
   return (
     <Router>
-      <Route exact path='/' component={Home} />
+      <Route component={Home} />
     </Router>
   )
 }

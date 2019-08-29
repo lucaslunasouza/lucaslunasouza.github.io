@@ -2,7 +2,7 @@
   "name": "lnsz.ca",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lnsz.github.io/lnsz.ca",
+  "homepage": "https://lnsz.ca",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
