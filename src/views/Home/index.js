@@ -24,7 +24,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showInfo: localStorage.showInfo === 'true',
+      showInfo: localStorage.showInfo !== 'false',
       currentPage: localStorage.currentPage ? parseInt(localStorage.currentPage) : 1,
     }
     this.toggleShowInfo = this.toggleShowInfo.bind(this)
