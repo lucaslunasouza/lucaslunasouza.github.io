@@ -61,42 +61,42 @@ const projects = [
   },
   {
     name: 'Spectrum Sorter',
-    type: type.desktop,
+    type: types.desktop,
     link: links.projects.spectrumSorter,
     technologies: ['C++', 'SDL', 'OpenGL'],
     description: 'Sorting algorithm visualization using colours'
   },
   {
     name: 'Pathfinder',
-    type: type.desktop,
+    type: types.desktop,
     link: links.projects.pathfinder,
     technologies: ['Python'],
     description: 'Visualization of a pathfinding algorithm for a rectangular grid.'
   },
   {
     name: 'Cordially',
-    type: type.web,
+    type: types.web,
     link: links.projects.cordially,
     technologies: ['JavaScript', 'Angular', 'Node.js', 'MongoDB'],
     description: 'Calendar web app that allows users to manage their calendar and share it with others.'
   },
   {
     name: 'Showgram',
-    type: type.web,
+    type: types.web,
     link: links.projects.showgram,
     technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
     description: 'Social media platform for discussing TV show episodes.'
   },
   {
     name: 'Glance',
-    type: type.web,
+    type: types.web,
     link: links.projects.glance,
     technologies: ['JavaScript', 'JQuery', 'Go', 'MongoDB'],
     description: 'Interactive map of world news.'
   },
   {
     name: 'Accord',
-    type: type.mobile,
+    type: types.mobile,
     link: links.projects.accord,
     technologies: ['JavaScript', 'React Native', 'Java', 'Spring Boot'],
     description: 'Gamified decision making for groups of friends.'

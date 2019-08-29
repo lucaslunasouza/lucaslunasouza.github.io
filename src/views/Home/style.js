@@ -1,5 +1,5 @@
 import styled from 'styled-components' 
-import theme from '../../shared/styles/theme.js'
+import theme from '../../shared/styles/theme'
 
 export const HomeContainer = styled.div`
   background: ${theme.colors.bg.default};
@@ -41,3 +41,15 @@ export const ProjectsButton = styled.div`
   }
 `
 
+export const ProjectListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+  font-weight: 200;
+`
+
+export const ProjectListTitle = styled.div`
+  font-size: ${theme.fonts.sizes.main};
+  margin-bottom: 50px;
+`

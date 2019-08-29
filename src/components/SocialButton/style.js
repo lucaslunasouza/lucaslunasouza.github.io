@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../shared/styles/theme.js'
+import theme from '../../shared/styles/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const SocialButtonContainer = styled.a`
