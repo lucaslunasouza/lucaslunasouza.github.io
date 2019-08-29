@@ -1,10 +1,20 @@
 import styled from 'styled-components' 
 import theme from '../../shared/styles/theme'
+import {
+  MOBILE_BREAKPOINT,
+  DESKTOP_HEIGHT_BREAKPOINT
+} from '../../shared/styles/layout'
 
 export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   height: 85vh;
+  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+    height: 90vh;
+  }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    height: 90vh;
+  }
 `
 
 export const ProfileWrapper = styled.div`

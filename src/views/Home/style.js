@@ -1,5 +1,9 @@
 import styled from 'styled-components' 
 import theme from '../../shared/styles/theme'
+import {
+  MOBILE_BREAKPOINT,
+  DESKTOP_HEIGHT_BREAKPOINT
+} from '../../shared/styles/layout'
 
 export const HomeContainer = styled.div`
   background: ${theme.colors.bg.default};
@@ -11,6 +15,14 @@ export const HomeContainer = styled.div`
   min-width: 100vw;
   transition: transform 0.5s ease;
   transform: ${props => !props.showInfo ? 'translateY(-85vh)' : ''};
+  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+    height: 190vh;
+    transform: ${props => !props.showInfo ? 'translateY(-90vh)' : ''};
+  }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    height: 190vh;
+    transform: ${props => !props.showInfo ? 'translateY(-90vh)' : ''};
+  }
 `
 
 export const ProjectsButtonContainer = styled.div`
@@ -18,6 +30,12 @@ export const ProjectsButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 15vh;
+  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+    height: 10vh;
+  }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    height: 10vh;
+  }
 `
 
 export const ProjectsButton = styled.div`
@@ -48,4 +66,10 @@ export const ProjectListWrapper = styled.div`
   height: 85vh;
   font-weight: 200;
   justify-content: space-between;
+  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+    height: 90vh;
+  }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    height: 90vh;
+  }
 `

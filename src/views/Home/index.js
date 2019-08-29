@@ -32,13 +32,10 @@ class Home extends React.Component {
   }
 
   handleScroll(e) {
-    if (e.deltaY < 0 && !this.state.showInfo) {
-      this.setState({ showInfo: true })
-    } else if (e.deltaY > 0 && this.state.showInfo) {
-      this.setState({ showInfo: false })
+    if ((e.deltaY < 0 && !this.state.showInfo) ||
+        (e.deltaY > 0 && this.state.showInfo)) {
+      this.toggleShowInfo()
     }
-    // do something like call `this.setState`
-    // access window.scrollY etc
   }
 
   saveState() {

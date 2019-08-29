@@ -34,18 +34,20 @@ export const ProjectsGrid = styled.div`
     height: 50vh;
   }
   @media only screen and (max-width: ${DESKTOP_BREAKPOINT}) {
-    width: 70vw;
+    width: 80vw;
   }
   @media only screen and (max-width: ${TABLET_BREAKPOINT}) {
     grid-template-columns: repeat(2, 1fr);
     height: 55vh;
-    width: 70vw;
-    grid-row-gap: 30px;
+    width: 90vw;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
   }
   @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     width: 90vw;
     grid-template-columns: repeat(2, 1fr);
     height: 55vh;
-    grid-row-gap: 30px;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
   }
 `

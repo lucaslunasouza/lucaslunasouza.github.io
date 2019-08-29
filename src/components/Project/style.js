@@ -23,6 +23,9 @@ export const ProjectTitle = styled.a`
   @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
     font-size: ${theme.fonts.sizes.section};
   }
+  @media only screen and (max-width: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.section};
+  }
 `
 
 export const ProjectTitleWrapper = styled.div`
@@ -36,10 +39,14 @@ export const DivisorLine = styled.div`
   width: 60%;
   border-bottom: 1px solid ${theme.colors.text.default};
   opacity: 0.15;
-  margin: 10px 0 25px 0;
+  margin: 10px 0 20px 0;
   @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
     width: 80%;
-    margin: 10px 0 15px 0;
+    margin: 5px 0 10px 0;
+  }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    width: 80%;
+    margin: 5px 0 10px 0;
   }
 `
 
@@ -53,6 +60,9 @@ export const ProjectTypeIcon = styled(FontAwesomeIcon)`
   @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
     font-size: ${theme.fonts.sizes.large};
   }
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.large};
+  }
 `
 
 export const ProjectTypeName = styled.div`
@@ -63,26 +73,28 @@ export const ProjectTypeName = styled.div`
   @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
     font-size: ${theme.fonts.sizes.large};
   }
+
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.large};
+  }
 `
 
 export const ProjectTechnologies = styled.div`
   margin-top: 5px;
   font-size: ${theme.fonts.sizes.default};
   text-align: center;
-  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
-    display: none;
-  }
 `
 
 export const ProjectDescription = styled.div`
   margin-top: 15px;
   font-size: ${theme.fonts.sizes.large};
   text-align: center;
-  padding: 20px;
-  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+  padding: 10px 20px;
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
     display: none;
   } 
   @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
-    display: none;
+    padding: 5px 15px;
+    font-size: ${theme.fonts.sizes.default};
   }
 `
