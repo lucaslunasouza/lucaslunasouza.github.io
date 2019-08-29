@@ -7,7 +7,6 @@ import {
   ProjectsButtonContainer,
   ProjectsButton,
   ProjectListWrapper,
-  ProjectListTitle
 } from './style'
 import {
   faCaretDown,
@@ -16,14 +15,17 @@ import {
 import strings from '../../shared/constants/strings'
 import social from '../../shared/constants/social'
 import projects from '../../shared/constants/projects'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  PROJECTS_PER_PAGE,
+} from '../../shared/styles/layout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Home extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       showInfo: localStorage.showInfo === 'true',
-      currentPage: localStorage.currentPage ? parseInt(localStorage.currentPage) : 1
+      currentPage: localStorage.currentPage ? parseInt(localStorage.currentPage) : 1,
     }
     this.toggleShowInfo = this.toggleShowInfo.bind(this)
   }
@@ -46,11 +48,14 @@ class Home extends React.Component {
   }
 
   getProjects() {
-    return projects.slice(6 * (this.state.currentPage - 1), 6 * (this.state.currentPage))
+    return projects.slice(
+      PROJECTS_PER_PAGE * (this.state.currentPage - 1),
+      PROJECTS_PER_PAGE * (this.state.currentPage)
+    )
   }
 
   getNumPages() {
-    return Math.ceil(projects.length / 6)
+    return Math.ceil(projects.length / PROJECTS_PER_PAGE)
   }
 
   render () {
@@ -72,7 +77,6 @@ class Home extends React.Component {
           </ProjectsButton>
         </ProjectsButtonContainer> 
         <ProjectListWrapper>
-          <ProjectListTitle>{strings.projects}</ProjectListTitle>
           <ProjectList projects={this.getProjects()} />
           <Pagination
             numPages={this.getNumPages()}

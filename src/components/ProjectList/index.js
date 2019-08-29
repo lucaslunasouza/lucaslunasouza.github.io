@@ -1,24 +1,35 @@
 import React from 'react'
 import {
-  ProjectsGrid,
-  Project
+  ProjectListContainer,
+  ProjectListTitle,
+  ProjectsGrid
 } from './style'
+import strings from '../../shared/constants/strings'
+import Project from '../Project'
 
 const ProjectList = (props) => {
-
   const getProjects = () => {
-    console.log(props.projects)
     return props.projects.map((project, index) => {
       return (
-        <Project key={index}>{project.name}</Project>
+        <Project
+          key={index}
+          name={project.name}
+          type={project.type}
+          link={project.link}
+          technologies={project.technologies}
+          description={project.description}
+        />
       )
     })
   }
 
   return (
-    <ProjectsGrid>
-      {getProjects()}
-    </ProjectsGrid>
+    <ProjectListContainer key={props.projects[0].name}>
+      <ProjectListTitle>{strings.projects}</ProjectListTitle>
+      <ProjectsGrid>
+        {getProjects()}
+      </ProjectsGrid>
+    </ProjectListContainer>
   )
 }
 

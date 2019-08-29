@@ -47,9 +47,5 @@ export const ProjectListWrapper = styled.div`
   align-items: center;
   height: 85vh;
   font-weight: 200;
-`
-
-export const ProjectListTitle = styled.div`
-  font-size: ${theme.fonts.sizes.main};
-  margin-bottom: 50px;
+  justify-content: space-between;
 `
