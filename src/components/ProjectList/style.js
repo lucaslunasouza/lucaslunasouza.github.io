@@ -30,6 +30,9 @@ export const ProjectsGrid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-row-gap: 50px;
   grid-column-gap: 30px;
+  @media only screen and (max-height: ${DESKTOP_BREAKPOINT}) {
+    height: 50vh;
+  }
   @media only screen and (max-width: ${DESKTOP_BREAKPOINT}) {
     width: 70vw;
   }

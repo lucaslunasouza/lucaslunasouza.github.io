@@ -16,6 +16,7 @@ const Profile = (props) => {
         key={index}
         icon={x.icon}
         url={x.url}
+        tooltip={x.tooltip}
       />
     )
   })

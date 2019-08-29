@@ -2,6 +2,18 @@ import styled from 'styled-components'
 import theme from '../../shared/styles/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+export const Tooltip = styled.div`
+  position: absolute;
+  transform: translateY(40px);
+  opacity: 0;
+  color: ${theme.colors.text.default};
+  transition: opacity 0.5s ease;
+  font-size: ${theme.fonts.sizes.default};
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+`
+
 export const SocialButtonContainer = styled.a`
   background: ${theme.colors.bg.default};
   color: ${theme.colors.text.default};
@@ -21,6 +33,9 @@ export const SocialButtonContainer = styled.a`
     background: ${theme.colors.bg.reverse};
     color: ${theme.colors.text.reverse};
     transform: translateY(-1px);
+  }
+  &:hover ${Tooltip} {
+    opacity: 1;
   }
   &:active {
     transform: translateY(1px);

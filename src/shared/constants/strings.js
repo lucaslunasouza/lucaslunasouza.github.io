@@ -3,7 +3,11 @@ const strings = {
   title: 'Software Engineer',
   portfolio: 'Portfolio',
   back: 'Back',
-  projects: 'Projects'
+  projects: 'Projects',
+  linkedIn: 'LinkedIn',
+  github: 'GitHub',
+  email: 'Email',
+  resume: 'Resume'
 }
 
 export default strings

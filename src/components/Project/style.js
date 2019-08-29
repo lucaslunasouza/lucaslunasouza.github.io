@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import theme from '../../shared/styles/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { TABLET_BREAKPOINT } from '../../shared/styles/layout'
+import {
+  MOBILE_BREAKPOINT,
+  DESKTOP_HEIGHT_BREAKPOINT,
+  MOBILE_HEIGHT_BREAKPOINT
+} from '../../shared/styles/layout'
 
 export const ProjectContainer = styled.div`
   display: flex;
@@ -15,6 +19,9 @@ export const ProjectTitle = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.section};
   }
 `
 
@@ -30,6 +37,10 @@ export const DivisorLine = styled.div`
   border-bottom: 1px solid ${theme.colors.text.default};
   opacity: 0.15;
   margin: 10px 0 25px 0;
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    width: 80%;
+    margin: 10px 0 15px 0;
+  }
 `
 
 export const ProjectTypeWrapper = styled.div`
@@ -39,6 +50,9 @@ export const ProjectTypeWrapper = styled.div`
 
 export const ProjectTypeIcon = styled(FontAwesomeIcon)`
   font-size: ${theme.fonts.sizes.section};
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.large};
+  }
 `
 
 export const ProjectTypeName = styled.div`
@@ -46,12 +60,18 @@ export const ProjectTypeName = styled.div`
   display: flex;
   align-items: center;
   font-size: ${theme.fonts.sizes.nav};
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    font-size: ${theme.fonts.sizes.large};
+  }
 `
 
 export const ProjectTechnologies = styled.div`
   margin-top: 5px;
   font-size: ${theme.fonts.sizes.default};
   text-align: center;
+  @media only screen and (max-height: ${MOBILE_HEIGHT_BREAKPOINT}) {
+    display: none;
+  }
 `
 
 export const ProjectDescription = styled.div`
@@ -59,7 +79,10 @@ export const ProjectDescription = styled.div`
   font-size: ${theme.fonts.sizes.large};
   text-align: center;
   padding: 20px;
-  @media only screen and (max-width: ${TABLET_BREAKPOINT}) {
+  @media only screen and (max-height: ${DESKTOP_HEIGHT_BREAKPOINT}) {
+    display: none;
+  } 
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     display: none;
   }
 `

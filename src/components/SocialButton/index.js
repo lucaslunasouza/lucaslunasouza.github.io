@@ -1,7 +1,8 @@
 import React from 'react'
 import {
   SocialButtonContainer,
-  SocialIcon
+  SocialIcon,
+  Tooltip
 } from './style'
 
 const SocialButton = (props) => {
@@ -10,6 +11,9 @@ const SocialButton = (props) => {
       <SocialIcon
         icon={props.icon}
       />
+      <Tooltip>
+        {props.tooltip}
+      </Tooltip>
     </SocialButtonContainer>
   )
 }

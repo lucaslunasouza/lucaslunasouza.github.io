@@ -28,6 +28,17 @@ class Home extends React.Component {
       currentPage: localStorage.currentPage ? parseInt(localStorage.currentPage) : 1,
     }
     this.toggleShowInfo = this.toggleShowInfo.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  handleScroll(e) {
+    if (e.deltaY < 0 && !this.state.showInfo) {
+      this.setState({ showInfo: true })
+    } else if (e.deltaY > 0 && this.state.showInfo) {
+      this.setState({ showInfo: false })
+    }
+    // do something like call `this.setState`
+    // access window.scrollY etc
   }
 
   saveState() {
@@ -60,7 +71,7 @@ class Home extends React.Component {
 
   render () {
     return (
-      <HomeContainer showInfo={this.state.showInfo}>
+      <HomeContainer onWheel={this.handleScroll} showInfo={this.state.showInfo}>
         <Profile
           name={strings.name}
           title={strings.title}
